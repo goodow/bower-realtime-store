@@ -22,6 +22,25 @@ Add `<script>` tags to your `index.html`:
 ```
 
 ## Usage
-See https://github.com/goodow/realtime-web-playground
+```javascript
+var store = new realtime.store.StoreImpl("http://localhost:1986/channel", null);
+var bus = store.getBus();
+
+var onLoadedFn = function(document) {
+  var model = document.getModel();
+  var root = model.getRoot();
+  var name = root.get("name");
+  console.log("Name: " + name.getText());
+};
+
+var opt_initializerFn = function(model) {
+  var name = model.createString("Larry Tin");
+  var root = model.getRoot();
+  root.set("name", name);
+};
+
+store.load("docType/docId", onLoadedFn, opt_initializerFn, null);
+```
+See a full example at https://github.com/goodow/realtime-web-playground
 
 You can try out the Goodow Realtime Store API Playground on its [live instance](http://realtimeplayground.goodow.com).
