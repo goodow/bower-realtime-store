@@ -18,7 +18,8 @@ Add `<script>` tags to your `index.html`:
 ```html
 <script src="/bower_components/bower-sockjs-client/sockjs.js"></script>
 <script src="/bower_components/google-diff-match-patch-js/diff_match_patch.js"></script>
-<script src="/bower_components/realtime-store/realtime-store.js"></script>
+<script src="/bower_components/realtime-store/realtime.store.js"></script>
+<script src="/bower_components/realtime-store/realtime.store.databinding.js"></script>
 ```
 
 ## Usage
