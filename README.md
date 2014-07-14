@@ -10,7 +10,7 @@ Please file issues and pull requests against that repo.
 Install with `bower`:
 
 ```shell
-bower install realtime-store
+bower install 'realtime-store#~gh-pages'
 ```
 
 Add `<script>` tags to your `index.html`:
